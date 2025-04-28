@@ -10,6 +10,10 @@
 
 <br>
 
+<app-zaznaczone-osoby *ngIf="wyswietlLicznik"></app-zaznaczone-osoby>
+
+<br>
+
 <app-osoba 
   *ngFor="let os of osoby" 
   [osoba]="os" 
