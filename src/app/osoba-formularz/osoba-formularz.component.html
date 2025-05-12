@@ -1,0 +1,27 @@
+<hr>
+<div>Formularz osoby:</div>
+<hr>
+<form *ngIf="wczytanoForm" #osobaForm="ngForm" (ngSubmit)="onSubmit(osobaForm)">
+    <div>
+        <label>
+            Imię
+        </label>
+        <input name="imie" type="text" [(ngModel)]="imie" required maxlength="20"/>
+    </div>
+    <div>
+        <label>
+            Nazwisko
+        </label>
+        <input name="nazwisko" type="text" [(ngModel)]="nazwisko" required maxlength="50"/>
+    </div>
+    <div>
+        <label>
+            Wiek
+        </label>
+        <input name="wiek" type="number" [(ngModel)]="wiek" (ngModelChange)="onWiekChange($event)" required max="100" min="10"/>
+    </div>
+    <div>
+        <input type="submit" value="Zapisz" [disabled]="osobaForm.form.invalid">
+        <input type="button" value="Anuluj">
+    </div>
+</form>

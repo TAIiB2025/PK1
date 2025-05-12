@@ -4,10 +4,11 @@ import { CommonModule } from '@angular/common';
 import { PodswietlenieDirective } from '../podswietlenie.directive';
 import { ZaznaczoneOsobyService } from '../zaznaczone-osoby.service';
 import { Subscription } from 'rxjs';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-osoba',
-  imports: [CommonModule, PodswietlenieDirective],
+  imports: [CommonModule, PodswietlenieDirective, RouterLink],
   templateUrl: './osoba.component.html',
   styleUrl: './osoba.component.css'
 })

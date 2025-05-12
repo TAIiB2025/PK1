@@ -24,4 +24,5 @@
     </button>
     <button *ngIf="!czyZaznaczona" (click)="zaznacz()">Zaznacz</button>
     <button *ngIf="czyZaznaczona" (click)="odznacz()">Odznacz</button>
+    <a [routerLink]="osoba.id + ''">Przejdź</a>
 </div>
